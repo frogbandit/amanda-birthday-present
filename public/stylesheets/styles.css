@@ -1,3 +1,120 @@
 body {
-  
+  font-family: "CrimsonRoman", Georgia, serif;
+  color: #333333;
+  margin: 0 auto;
+}
+
+.container {
+  height: 560px;
+  width: 1000px;
+  margin: 0px auto;
+}
+
+.alert-text {
+  display: none;
+  height: 90px;
+  width: 300px;
+  padding-top: 60px;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-color: #ffffff;
+  border: 2px solid #dadada;
+  -webkit-box-shadow: 5px 5px 5px #333333;
+     -moz-box-shadow: 5px 5px 5px #333333;
+          box-shadow: 5px 5px 5px #333333;
+}
+
+.title {
+  font-family: "CrimsonBold", Georgia, serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  height: 30px;
+  padding: 20px 0px 20px 0px;
+}
+
+.heading {
+  font-family: "CrimsonBold", Georgia, serif;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.context {
+  height: 406px;
+  width: 256px;
+  float: left;
+  border: solid 2px #dadada;
+  margin-right: 20px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.story {
+  height: 406px;
+  width: 376px;
+  float: left;
+  border: solid 2px #dadada;
+  padding: 10px;
+  overflow: auto;
+}
+
+.procedure {
+  height: 406px;
+  width: 256px;
+  float: left;
+  border: solid 2px #dadada;
+  margin-left: 20px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.submission {
+  height: 36px;
+  width: 376px;
+  float: left;
+  margin: 20px 300px 0px 300px;
+  padding: 0px 10px 0px 10px;
+  border: 2px solid #dadada;
+  border-radius: 7px;
+  font-family: "CrimsonRoman", Georgia, serif;
+  font-size: 16px;
+  color: #333333;
+}
+
+.submission:focus {
+  outline: none;
+}
+
+.story-log, .context-note, .procedure-action {
+  margin-bottom: 5px;
+}
+
+.context-location, .context-time {
+  float: right;
+}
+
+.context-note {
+  margin-left: 20px;
+}
+
+.label {
+  font-family: "CrimsonBold", Georgia, serif;
+}
+
+.procedure-action {
+  color: #0088cc;
+  cursor: pointer;
+}
+
+.procedure-action:hover {
+  color: #00008b;
+  text-decoration: underline;
+}
+
+.disabled, .disabled:hover {
+  color: #dadada;
+  cursor: text;
+  text-decoration: none;
 }

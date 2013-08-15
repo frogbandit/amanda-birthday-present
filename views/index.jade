@@ -3,16 +3,40 @@ html
 
   head
 
-    title Trains
+    title Summer Skylines
 
-    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css', type="text/css")
-    link(rel='stylesheet', href='/stylesheets/fonts.css', type="text/css")
-    link(rel='stylesheet', href='/stylesheets/styles.css', type="text/css")
+    link(rel="stylesheet", href="/stylesheets/fonts.css", type="text/css")
+    link(rel="stylesheet", href="/stylesheets/styles.css", type="text/css")
 
-    script(src='/javascripts/jquery-1.10.2.min.js', type='text/javascript')
-    script(src='/bootstrap/js/bootstrap.min.js', type='text/javascript')
+    script(src="/javascripts/jquery-1.10.2.min.js", type="text/javascript")
+    script(src="/javascripts/helpers.js", type="text/javascript")
+    script(src="/javascripts/engine.js", type="text/javascript")
 
   body
 
-    h1 Trains
-    p Welcome to Trains.
+    div.alert-text
+    div.container
+
+      div.title Summer Skylines
+
+      div.context
+        div.heading Context
+        div.context-location-container
+          span.label Location:
+          span.context-location
+        div.context-time-container
+          span.label Time:
+          span.context-time
+        div.context-notes-container
+          div.label Notes:
+          div.context-notes
+
+      div.story
+        div.heading Story
+        div.story-content
+
+      div.procedure
+        div.heading Procedure
+        div.procedure-content
+
+      input.submission(type="text", placeholder="Enter to submit action...", autofocus)
