@@ -32,7 +32,13 @@ body {
   letter-spacing: 2px;
   text-align: center;
   height: 30px;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0px 10px 0px;
+}
+
+.subtitle {
+  text-align: center;
+  height: 30px;
+  padding-bottom: 20px;
 }
 
 .heading {

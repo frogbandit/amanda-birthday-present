@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   setTimeout(function() {
     tellStep1();
-  }, 5000);
+  }, 7000);
 
   $("input.submission").keypress(function (e) {
     if (e.which === 13 && $(this).val() && !$(".alert-text").is(":visible")) {
@@ -52,8 +52,8 @@ function tellStep2() {
 
 function tellStep3() {
   currStep = "3";
-  newStoryLog("A lamp.");
+  newStoryLog("Feels like a lamp.");
   setTimeout(function() {
-    updateProcedure(["Continue to feel around.", "Flick lamp."]);
+    updateProcedure(["Feel around more.", "Flick lamp."]);
   }, 1000);
 }
