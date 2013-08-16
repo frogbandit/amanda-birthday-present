@@ -26,6 +26,15 @@ body {
           box-shadow: 5px 5px 5px #333333;
 }
 
+.loading-gif {
+  display: none;
+  margin-top: 28px;
+}
+
+hr {
+  margin: 20px 0px 20px 0px;
+}
+
 .title {
   font-family: "CrimsonBold", Georgia, serif;
   font-size: 20px;
@@ -76,11 +85,11 @@ body {
   overflow: auto;
 }
 
-.submission {
+input.submission {
   height: 36px;
   width: 376px;
   float: left;
-  margin: 20px 300px 0px 300px;
+  margin: 20px 20px 0px 300px;
   padding: 0px 10px 0px 10px;
   border: 2px solid #dadada;
   border-radius: 7px;
@@ -89,7 +98,7 @@ body {
   color: #333333;
 }
 
-.submission:focus {
+input.submission:focus {
   outline: none;
 }
 

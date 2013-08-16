@@ -1,0 +1,2 @@
+var stepTracker = "";
+var currValidActions = [];

@@ -9,7 +9,9 @@ html
     link(rel="stylesheet", href="/stylesheets/styles.css", type="text/css")
 
     script(src="/javascripts/jquery-1.10.2.min.js", type="text/javascript")
+    script(src="/javascripts/variables.js", type="text/javascript")
     script(src="/javascripts/helpers.js", type="text/javascript")
+    script(src="/javascripts/steps.js", type="text/javascript")
     script(src="/javascripts/engine.js", type="text/javascript")
 
   body
@@ -18,7 +20,7 @@ html
     div.container
 
       div.title Summer Skylines
-      div.subtitle &mdash; A story of a girl's journey back home. &mdash;
+      div.subtitle &mdash; An interactive story about a girl's journey back home &mdash;
 
       div.context
         div.heading Context
@@ -41,3 +43,4 @@ html
         div.procedure-content
 
       input.submission(type="text", placeholder="Enter to submit action...", autofocus)
+      img.loading-gif(src='/images/animations/loading.gif')
