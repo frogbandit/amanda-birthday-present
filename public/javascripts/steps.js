@@ -26,7 +26,7 @@ function tellStep3() {
   newStoryLog("There's a lamp here.");
   setTimeout(function() {
     updateProcedure(["Feel around more.", "Flick lamp on."]);
-    hideLoadingGif();
+    clearSubmission();
   }, 1000);
 }
 
@@ -34,7 +34,7 @@ function tellStep4a() {
   if (stepTracker == "4b") {
     setTimeout(function() {
       stepTracker = "4a";
-      hideLoadingGif();
+      clearSubmission();
       tellStep5();
     }, 1000);
   }
@@ -43,7 +43,7 @@ function tellStep4a() {
     setTimeout(function() {
       newContextNote("The room is bright, but blurry.");
       stepTracker = "4a";
-      hideLoadingGif();
+      clearSubmission();
     }, 1000);
   }
 }
@@ -53,13 +53,13 @@ function tellStep4b() {
   if (stepTracker == "4a") {
     setTimeout(function() {
       stepTracker = "4b";
-      hideLoadingGif();
+      clearSubmission();
       tellStep5();
     }, 1000);
   }
   else {
     stepTracker = "4b";
-    hideLoadingGif();
+    clearSubmission();
   }
 }
 
@@ -79,7 +79,7 @@ function tellStep6() {
     newStoryLog("A window with drawn curtains.");
     setTimeout(function() {
       updateProcedure(["Draw curtains.", "Investigate bag."]);
-      hideLoadingGif();
+      clearSubmission();
     }, 1000);
   }, 1000);
 }
@@ -90,23 +90,23 @@ function tellStep7a() {
     newStoryLog("There's a smartphone in here.");
     setTimeout(function() {
       newProcedureAction("Investigate smartphone.");
-      hideLoadingGif();
+      clearSubmission();
     }, 1000);
   }, 1000);
 }
 
 function tellStep7b() {
-  newStoryLog("A busy morning at Wall Street.");
+  newStoryLog("A busy Wall Street morning.");
   setTimeout(function() {
     updateContextLocation("Wall Street - New York, NY");
     if (stepTracker == "7c") {
       stepTracker = "7b";
-      hideLoadingGif();
+      clearSubmission();
       tellStep8();
     }
     else {
       stepTracker = "7b";
-      hideLoadingGif();
+      clearSubmission();
     }
   }, 1000);
 }
@@ -119,12 +119,12 @@ function tellStep7c() {
       newContextNote("Hope I won't miss my flight.");
       if (stepTracker == "7b") {
         stepTracker = "7c";
-        hideLoadingGif();
+        clearSubmission();
         tellStep8();
       }
       else {
         stepTracker = "7c";
-        hideLoadingGif();
+        clearSubmission();
       }
     }, 1000);
   }, 1000);
@@ -132,27 +132,42 @@ function tellStep7c() {
 
 function tellStep8() {
   setTimeout(function() {
-    updateProcedure(["Prepare to leave."]);
+    updateProcedure(["Leave hotel."]);
   }, 1000);
 }
 
 function tellStep9() {
   newStoryLog("Packed and ready to go.");
   setTimeout(function() {
-    hideLoadingGif();
+    clearSubmission();
     tellStep10();
   }, 1000);
 }
 
 function tellStep10() {
+  displayAlert("Chapter 2 &mdash; JFK International Airport");
   clearStory();
   clearContextNotes();
   clearProcedure();
   setTimeout(function() {
     updateContextLocation("JFK Airport - New York, NY");    
-    updateContextTime("Unknown");
+    updateContextTime("11:20 AM");
     setTimeout(function() {
-      displayAlert("End of Chapter One.")
+      // tellStep11();
     }, 1000);
   }, 1000);
+}
+
+function tellStep11() {
+  newStoryLog("The taxi driver departs.");
+  setTimeout(function() {
+    newContextNote("Looks like busy day at the airport.");
+    setTimeout(function() {
+      updateProcedure(["Enter airport."]);
+    }, 1000);
+  }, 1000);
+}
+
+function tellStory12() {
+  newStoryLog("A blast of cool air.");
 }

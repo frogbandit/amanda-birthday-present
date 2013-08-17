@@ -1,17 +1,19 @@
 $(document).ready(function() {
 
   setTimeout(function() {
+    displayAlert("Chapter 1 &mdash; The Room");
     tellStep1();
   }, 7000);
 
   $("input.submission").keypress(function (e) {
+    console.log(e.which);
     if (e.which === 13 && $(this).val() && !$(".loading-gif").is(":visible") && !$(".alert-text").is(":visible")) {
       var submission = formatAction($(this).val());
-      clearSubmission();
       showLoadingGif();
 
       if ($.inArray(submission, currValidActions) === -1) {
         displayAlert("Action not recognized.");
+        clearSubmission();
         return;
       }
 
@@ -64,10 +66,17 @@ $(document).ready(function() {
         }, 1000);
       }
 
-      else if (submission === "prepare-to-leave") {
-        disableProcedureAction("prepare-to-leave");
+      else if (submission === "leave-hotel") {
+        disableProcedureAction("leave-hotel");
         setTimeout(function() {
           tellStep9();
+        }, 1000);
+      }
+
+      else if (submission === "enter-airport") {
+        disableProcedureAction("enter-airport");
+        setTimeout(function() {
+          tellStep12();
         }, 1000);
       }
 

@@ -78,6 +78,7 @@ function disableProcedureAction(id) {
 
 function clearSubmission() {
   $("input.submission").val("");
+  hideLoadingGif();
 }
 
 function displayAlert(content) {
@@ -105,7 +106,8 @@ function formatAction(action) {
 
 $(document).on("click", ".procedure-action", function() {
   if (!$(this).hasClass("disabled")) {
-    $(".submission").val($(this).html());
-    $(".submission").focus();
+    $("input.submission").val($(this).html());
+    $("input.submission").focus();
+    $("input.submission").trigger($.Event('keypress', { which: 13 } ));
   }
 });
