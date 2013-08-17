@@ -1,12 +1,10 @@
 $(document).ready(function() {
 
   setTimeout(function() {
-    displayAlert("Chapter 1 &mdash; The Room");
-    tellStep1();
+    tellStep16();
   }, 7000);
 
   $("input.submission").keypress(function (e) {
-    console.log(e.which);
     if (e.which === 13 && $(this).val() && !$(".loading-gif").is(":visible") && !$(".alert-text").is(":visible")) {
       var submission = formatAction($(this).val());
       showLoadingGif();
@@ -77,6 +75,62 @@ $(document).ready(function() {
         disableProcedureAction("enter-airport");
         setTimeout(function() {
           tellStep12();
+        }, 1000);
+      }
+
+      else if (submission === "check-in-luggage") {
+        disableProcedureAction("check-in-luggage");
+        setTimeout(function() {
+          tellStep13a();
+        }, 1000);
+      }
+
+      else if (submission === "open-bag") {
+        disableProcedureAction("open-bag");
+        setTimeout(function() {
+          tellStep13b();
+        }, 1000);
+      }
+
+      else if (submission === "investigate-slip-of-paper") {
+        disableProcedureAction("investigate-slip-of-paper");
+        setTimeout(function() {
+          tellStep13c();
+        }, 1000);
+      }
+
+      else if (submission === "finish-check-in") {
+        disableProcedureAction("finish-check-in");
+        setTimeout(function() {
+          tellStep14();
+        }, 1000);
+      }      
+
+      else if (submission === "enter-security-checkpoint") {
+        disableProcedureAction("enter-security-checkpoint");
+        setTimeout(function() {
+          tellStep15a();
+        }, 1000);
+      }
+
+      else if (submission === "investigate-boarding-pass") {
+        disableProcedureAction("investigate-boarding-pass");
+        setTimeout(function() {
+          tellStep15b();
+        }, 1000);
+      }
+
+      else if (submission === "proceed-to-terminal") {
+        disableProcedureAction("proceed-to-terminal");
+        setTimeout(function() {
+          tellStep16();
+        }, 1000);
+      }
+
+      else if (submission === "wait-for-flight") {
+        disableProcedureAction("wait-for-flight");
+        setTimeout(function() {
+          tellStep17();
         }, 1000);
       }
 
