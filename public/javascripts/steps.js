@@ -270,13 +270,13 @@ function tellStep15b() {
 }
 
 function tellStep16() {
-  displayAlert("Chapter 3 &mdash; SFO");
+  displayAlert("Chapter 3 &mdash; Home");
   clearSubmission();
   clearStory();
   clearContextNotes();
   clearProcedure();
   setTimeout(function() {
-    updateContextLocation("SFO - San Francisco, CA");    
+    updateContextLocation("Californian skies");    
     updateContextTime("4:00 P.M. PDT");
     setTimeout(function() {
       tellStep17();
@@ -285,5 +285,90 @@ function tellStep16() {
 }
 
 function tellStep17() {
-  
+  newStoryLog("INTERCOM: \"Folks, we have begun our descent into San Francisco. We will arrive at the gate in roughly 20 minutes. Thank you for flying today with Delta Air Lines.\"");
+  setTimeout(function() {
+    newContextNote("A beautiful overhead view of the Bay Area...");
+    setTimeout(function() {
+      tellStep18();
+    }, 7000);
+  }, 1000);
+}
+
+function tellStep18() {
+  updateContextTime("4:15 P.M. PDT");
+  setTimeout(function() {
+    newStoryLog("INTERCOM: \"Please fasten your seat belts and raise your chairs to the upright position. We will be landing shortly.\"");
+    setTimeout(function() {
+      updateProcedure(["Fasten seat belt."]);
+    }, 1000);
+  }, 1000);
+}
+
+function tellStep19() {
+  newStoryLog("Seat belt fastened.");
+  setTimeout(function() {
+    newStoryLog("The plane descends...");
+    setTimeout(function() {
+      clearSubmission();
+      tellStep20();
+    }, 5000);
+  }, 1000);
+}
+
+function tellStep20() {
+  updateContextTime("4:20 P.M. PDT");
+  setTimeout(function() {
+    newStoryLog("INTERCOM: \"We have landed at San Francisco International Airport. The time is 4:20 PM, and the temperature is 72 degrees Fahrenheit. Thank you again for flying with us.\"");
+    setTimeout(function() {
+      updateContextLocation("SFO - San Francisco, CA");
+      setTimeout(function() {
+        tellStep21();
+      }, 3000);
+    }, 1000);
+  }, 1000);
+}
+
+function tellStep21() {
+  newStoryLog("A text from Dad.");
+  setTimeout(function() {
+    updateProcedure(["Check text.", "Exit plane."]);
+  }, 1000);
+}
+
+function tellStep22a() {
+  newStoryLog("A busy afternoon at SFO.");
+  setTimeout(function() {
+    newContextNote("Finally home.");
+    setTimeout(function() {
+      if (stepTracker == "22ba") {
+        clearSubmission();
+        tellStep23();
+      }
+      else {
+        newContextNote("Better check Dad's text, though...");
+        setTimeout(function() {
+          stepTracker = "22a";
+          clearSubmission();
+        }, 1000);
+      }
+    }, 1000);
+  }, 1000); 
+}
+
+function tellStep22b() {
+  newStoryLog("DAD: \"Just arrived at the airport.\"");
+  setTimeout(function() {
+    if (stepTracker == "22a") {
+      clearSubmission();
+      tellStep23();
+    }
+    else {
+      stepTracker = "22b";
+      clearSubmission();
+    }
+  }, 1000);
+}
+
+function tellStep23() {
+  displayAlert("Great job.");
 }

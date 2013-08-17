@@ -15,124 +15,70 @@ $(document).ready(function() {
         return;
       }
 
-      if (submission === "feel-around") {
-        disableProcedureAction("feel-around");
-        setTimeout(function() {
-          tellStep3();
-        }, 1000);
-      }
+      disableProcedureAction(submission);
+      setTimeout(function() {
 
-      else if (submission === "flick-lamp-on") {
-        disableProcedureAction("flick-lamp-on");
-        setTimeout(function() {
-          tellStep4a();
-        }, 1000);
-      }
+        switch(submission) {
+          case "feel-around":
+            tellStep3();
+            break;
+          case "flick-lamp-on":
+            tellStep4a();
+            break;
+          case "feel-around-more":
+            tellStep4b();
+            break;
+          case "look-around":
+            tellStep6();
+            break;
+          case "investigate-bag":
+            tellStep7a();
+            break;
+          case "draw-curtains":
+            tellStep7b();
+            break;
+          case "investigate-smartphone":
+            tellStep7c();
+            break;
+          case "leave-hotel":
+            tellStep9();
+            break;
+          case "enter-airport":
+            tellStep12();
+            break;
+          case "check-in-luggage":
+            tellStep13a();
+            break;
+          case "open-bag":
+            tellStep13b();
+            break;
+          case "investigate-slip-of-paper":
+            tellStep13c();
+            break;
+          case "finish-check-in":
+            tellStep14();
+            break;
+          case "enter-security-checkpoint":
+            tellStep15a();
+            break;
+          case "investigate-boarding-pass":
+            tellStep15b();
+            break;
+          case "proceed-to-terminal":
+            tellStep16();
+            break;
+          case "fasten-seat-belt":
+            tellStep19();
+            break;
+          case "exit-plane":
+            tellStep22a();
+            break;
+          case "check-text":
+            tellStep22b();
+            break;
+        }
 
-      else if (submission === "feel-around-more") {
-        disableProcedureAction("feel-around-more");
-        setTimeout(function() {
-          tellStep4b();
-        }, 1000);
-      }
-
-      else if (submission === "look-around") {
-        disableProcedureAction("look-around");
-        setTimeout(function() {
-          tellStep6();
-        }, 1000);
-      }
-
-      else if (submission === "investigate-bag") {
-        disableProcedureAction("investigate-bag");
-        setTimeout(function() {
-          tellStep7a();
-        }, 1000);
-      }
-
-      else if (submission === "draw-curtains") {
-        disableProcedureAction("draw-curtains");
-        setTimeout(function() {
-          tellStep7b();
-        }, 1000);
-      }
-
-      else if (submission === "investigate-smartphone") {
-        disableProcedureAction("investigate-smartphone");
-        setTimeout(function() {
-          tellStep7c();
-        }, 1000);
-      }
-
-      else if (submission === "leave-hotel") {
-        disableProcedureAction("leave-hotel");
-        setTimeout(function() {
-          tellStep9();
-        }, 1000);
-      }
-
-      else if (submission === "enter-airport") {
-        disableProcedureAction("enter-airport");
-        setTimeout(function() {
-          tellStep12();
-        }, 1000);
-      }
-
-      else if (submission === "check-in-luggage") {
-        disableProcedureAction("check-in-luggage");
-        setTimeout(function() {
-          tellStep13a();
-        }, 1000);
-      }
-
-      else if (submission === "open-bag") {
-        disableProcedureAction("open-bag");
-        setTimeout(function() {
-          tellStep13b();
-        }, 1000);
-      }
-
-      else if (submission === "investigate-slip-of-paper") {
-        disableProcedureAction("investigate-slip-of-paper");
-        setTimeout(function() {
-          tellStep13c();
-        }, 1000);
-      }
-
-      else if (submission === "finish-check-in") {
-        disableProcedureAction("finish-check-in");
-        setTimeout(function() {
-          tellStep14();
-        }, 1000);
-      }      
-
-      else if (submission === "enter-security-checkpoint") {
-        disableProcedureAction("enter-security-checkpoint");
-        setTimeout(function() {
-          tellStep15a();
-        }, 1000);
-      }
-
-      else if (submission === "investigate-boarding-pass") {
-        disableProcedureAction("investigate-boarding-pass");
-        setTimeout(function() {
-          tellStep15b();
-        }, 1000);
-      }
-
-      else if (submission === "proceed-to-terminal") {
-        disableProcedureAction("proceed-to-terminal");
-        setTimeout(function() {
-          tellStep16();
-        }, 1000);
-      }
-
-      else if (submission === "wait-for-flight") {
-        disableProcedureAction("wait-for-flight");
-        setTimeout(function() {
-          tellStep17();
-        }, 1000);
-      }
+      }, 1000);  
 
     }
   });
