@@ -120,12 +120,12 @@ input.submission:focus {
 }
 
 .procedure-action {
-  color: #0088cc;
+  color: #61b329;
   cursor: pointer;
 }
 
 .procedure-action:hover {
-  color: #00008b;
+  color: #488214;
   text-decoration: underline;
 }
 
