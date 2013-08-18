@@ -5,7 +5,7 @@ $(document).ready(function() {
 
   showApp();
   setTimeout(function() {
-    tellStep16();
+    tellStep1();
   }, 7000);
 
   $("input.submission").keypress(function (e) {
