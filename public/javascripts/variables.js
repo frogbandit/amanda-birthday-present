@@ -1,2 +1,0 @@
-var stepTracker = "";
-var currValidActions = [];

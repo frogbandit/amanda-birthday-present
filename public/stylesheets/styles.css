@@ -4,12 +4,6 @@ body {
   margin: 0 auto;
 }
 
-.container {
-  height: 560px;
-  width: 1000px;
-  margin: 0px auto;
-}
-
 .alert-text {
   display: none;
   height: 90px;
@@ -24,6 +18,13 @@ body {
   -webkit-box-shadow: 5px 5px 5px #333333;
      -moz-box-shadow: 5px 5px 5px #333333;
           box-shadow: 5px 5px 5px #333333;
+}
+
+.container {
+  display: none;
+  height: 560px;
+  width: 1000px;
+  margin: 0px auto;
 }
 
 .loading-gif {
@@ -132,4 +133,16 @@ input.submission:focus {
   color: #dadada;
   cursor: text;
   text-decoration: none;
+}
+
+.ending {
+  display: none;
+  height: 560px;
+  width: 1000px;
+  margin: 0px auto;
+}
+
+.ending-inner {
+  padding: 100px 300px 100px 300px;
+  text-align: right;
 }
