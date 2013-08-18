@@ -604,7 +604,7 @@ function tellStep23() {
 }
 
 function tellStep24() {
-  newStoryLog("A long conveyer belt littered with colorful luggage.");
+  newStoryLog("A long conveyer belt lined with colorful luggage.");
   setTimeout(function() {
     updateProcedure(["Find luggage."]);
     clearSubmission();
