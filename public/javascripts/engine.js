@@ -418,7 +418,7 @@ function tellStep13a() {
 }
 
 function tellStep13b() {
-  newStoryLog("No water, but a slip of paper.");
+  newStoryLog("No water, but a slip of paper?");
   setTimeout(function() {
     newProcedureAction("Investigate slip of paper.");
     clearSubmission();  
